@@ -1,17 +1,27 @@
 # express + mongoDB
 > 一个简单的express项目
 
-## 搭建与运行
+## 安装与运行
+```
+安装
+$ git clone https://github.com/lenjee/api-express.git
+$ cd api-express & npm install
+
+运行
+$ npm start
+
+在浏览器中访问 http://localhost:3333/
+
+```
+
+## 项目的搭建
 ```
 安装express
 $ npm install -g express-generator
 
 构建项目
 $ express -e 项目名
-$ cd 项目名 & npm install
-
-运行
-$ npm start
+$ cd api-express & npm install
 
 ```
 ## 工程结构说明
