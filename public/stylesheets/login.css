@@ -1,0 +1,36 @@
+.list{
+  width: 100%;
+  height: 1rem;
+  margin: .2rem 0 0 0;
+  background-color: #ffffff;
+  display: flex;
+  display: -webkit-flex;
+}
+
+.left{
+  width: 2rem;
+  height: 1rem;
+  text-align: center;
+  line-height: 1rem;
+}
+
+.right{
+  width: 4.5rem;
+  height: 1rem;
+  line-height: 1rem;
+}
+
+.input-txt{
+  width: 100%;
+  height: .7rem;
+  border: none;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.input-btn{
+  width: 100%;
+  height: 1rem;
+  text-align: center;
+  line-height: 1rem;
+  border: none;
+}

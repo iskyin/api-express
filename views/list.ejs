@@ -1,0 +1,16 @@
+<%- include template/top/head %>
+
+  <link rel='stylesheet' href='/stylesheets/list.css' />
+
+<%- include template/top/headend %>
+  <h1><%= title %></h1>
+
+  <ul>
+    <% for(var i=0;i<list.length;i++){ %>
+      <li>
+        <p><%= list[i] %></p>
+      </li>
+    <%}%>
+  </ul>
+
+<%- include template/top/floor %>

@@ -4,6 +4,10 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var bson =require('bson');
+var routerSetting = require('./routes/index');
+var mongodbSetting=require('./config/mongodb/index');
+var flash=require('connect-flash');
 
 var app = express();
 
@@ -11,6 +15,16 @@ var app = express();
 // __dirname为全局变量，存储当前正在执行的脚本所在的目录(根目录)
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs'); // 设置模板引擎为ejs
+
+// flash是一个在session中用于存储信息的特定区域。
+// 信息写入flash下一次显示完毕后即被清除
+app.use(flash());
+
+// 路由配置
+routerSetting(app);
+
+// 配置数据库
+mongodbSetting(app);
 
 // 配置 favicon
 app.use(favicon(path.join(__dirname, 'public/images', 'favicon.ico')));
@@ -21,12 +35,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
-// 路由配置
-var index = require('./routes/index');
-var users = require('./routes/users');
-app.use('/', index);
-app.use('/users', users);
 
 // 抓取404并进行错误处理
 app.use(function(req, res, next) {
@@ -47,5 +55,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 
 });
+
+
+
 
 module.exports = app;

@@ -1,11 +1,26 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<%- include template/top/head %>
+
+  <link rel='stylesheet' href='/stylesheets/index.css' />
+
+<%- include template/top/headend %>
+
+  <h1><%= title %></h1>
+
+  <div class="account">
+
+    <div class="account-set blue">
+      <a href="/login">
+        登录
+      </a>
+    </div>
+
+    <div class="account-set green">
+      <a href="/register">
+        注册
+      </a>
+    </div>
+
+  </div>
+
+
+<%- include template/top/floor %>

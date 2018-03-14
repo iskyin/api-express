@@ -1,0 +1,53 @@
+<%- include template/top/head %>
+
+  <link rel='stylesheet' href='/stylesheets/register.css' />
+
+<%- include template/top/headend %>
+
+<h1><%= title %></h1>
+
+<form method="post">
+  <div class="list">
+    <div class="left">
+      用户名
+    </div>
+    <div class="right">
+      <input type="text" class="input-txt" name="name">
+    </div>
+  </div>
+
+  <div class="list">
+    <div class="left">
+      密码
+    </div>
+    <div class="right">
+      <input type="password" class="input-txt" name="name">
+    </div>
+  </div>
+
+  <div class="list">
+    <div class="left">
+      确认密码
+    </div>
+    <div class="right">
+      <input type="password" class="input-txt" name="name">
+    </div>
+  </div>
+
+  <div class="list">
+    <div class="left">
+      邮箱
+    </div>
+    <div class="right">
+      <input type="text" class="input-txt" name="name">
+    </div>
+  </div>
+
+
+  <div class="list">
+    <input type="submit" class="input-btn" value="注册">
+  </div>
+</form>
+
+
+<%- include template/top/floor %>
